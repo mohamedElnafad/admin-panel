@@ -1,0 +1,48 @@
+.sidebar {
+  direction: rtl;
+  width: 254px;
+  background: #fff;
+  height: 100vh;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  ul {
+    list-style: none;
+    padding: 0;
+
+    a {
+      span {
+        font-weight: 500;
+        color: black;
+      }
+      text-align: right;
+      padding: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        svg,
+        span {
+          color: blue;
+        }
+        background: rgb(236, 247, 251);
+      }
+    }
+
+    .active {
+      svg,
+      span {
+        color: blue;
+      }
+
+      // &:hover {
+      //   color: blue;
+      //   background: rgb(236, 247, 251);
+      // }
+      background: rgb(236, 247, 251);
+      border-radius: 5px;
+    }
+  }
+  .scrollList {
+    height: fit-content;
+    margin-right: 30px;
+  }
+}
