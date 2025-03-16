@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './ContactManagement.module.scss';
-import Button from '../Button/Button';
+import Button from '../../components/Button/Button';
 import '../../App.module.scss';
 
 const ContactManagement: React.FC = () => {
@@ -107,9 +107,13 @@ const ContactManagement: React.FC = () => {
           </div>
 
           {/* Buttons */}
-          <div className='col-md-12 text-center mt-3 d-flex gap-3 align-items-center justify-content-center'>
-            <Button title={'حفظ التغييرات'} color='btn-primary' />
-            <Button title={'نشر على الموقع'} color='btn-outline-primary' />
+          <div className='row '>
+            <div className='col-md-6'>
+              <Button title={'حفظ التغييرات'} color='btn-primary' />
+            </div>
+            <div className='col-md-6'>
+              <Button title={'نشر على الموقع'} color='btn-outline-primary' />
+            </div>
           </div>
         </div>
       </div>

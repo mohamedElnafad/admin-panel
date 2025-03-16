@@ -3,12 +3,15 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Header from './components/Header/Header';
 import styles from './App.module.scss';
 import ReportPage from './Pages/report-page/ReportPage';
-import ContentManagement from './Pages/content-management/excutive-msg/ExcutiveMessage';
-import ContactManagement from './components/ContactManagement/ContactManagement';
+import ContactManagement from './Pages/contact-management/ContactManagement';
 import ExecutiveMessage from './Pages/content-management/excutive-msg/ExcutiveMessage';
 import OurStory from './Pages/content-management/our-story/OurStory';
 import AboutUs from './Pages/content-management/about-us/AboutUs';
 import CustomsAndAuthorities from './Pages/content-management/customs-and-authorities/CustomsAndAuthorities';
+import LawsAndGuidelines from './Pages/content-management/laws-and-guidlines/LawsAndGuidelines';
+import SocialLinks from './Pages/content-management/social-links/SocialLinks';
+import PrivacyPolicy from './Pages/content-management/privacy-policy/PrivacyPolicy';
+import CommitteeAndTeams from './Pages/committe-and-teams/CommitteeAndTeams';
 
 function App() {
   return (
@@ -20,8 +23,11 @@ function App() {
           <div className={styles.content}>
             <Routes>
               <Route path='/report' element={<ReportPage />} />
-              <Route path='/contact' element={<ContactManagement />} />
-
+              <Route path='/' element={<ContactManagement />} />
+              <Route
+                path='/comittee-and-teams'
+                element={<CommitteeAndTeams />}
+              />
               <Route
                 path='/content-management/about-us'
                 element={<AboutUs />}
@@ -38,10 +44,18 @@ function App() {
                 path='/content-management/customs-authorities'
                 element={<CustomsAndAuthorities />}
               />
-              {/* <Route path='/content-management/laws-guidelines' element={<LawsAndGuidelines />} />
-                <Route path='/content-management/social-links' element={<SocialLinks />} />
-                <Route path='/content-management/privacy-policy' element={<PrivacyPolicy />} /> */}
-              {/* </Route> */}
+              <Route
+                path='/content-management/laws-guidelines'
+                element={<LawsAndGuidelines />}
+              />
+              <Route
+                path='/content-management/social-links'
+                element={<SocialLinks />}
+              />
+              <Route
+                path='/content-management/privacy-policy'
+                element={<PrivacyPolicy />}
+              />
             </Routes>
           </div>
         </div>

@@ -1,0 +1,56 @@
+.lawsAndGuidlines {
+  direction: rtl;
+  text-align: right;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+
+  input[type='text'],
+  input[type='email'] {
+    background-color: #f9f7f7;
+  }
+
+  .label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .fileUpload {
+    display: flex;
+    align-items: center;
+    background-color: #f9f7f7;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+
+    .fileInput {
+      display: none;
+    }
+
+    .fileLabel {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .fileIcon {
+      font-size: 1.2rem;
+      color: #007bff;
+      margin: 0 5px;
+    }
+    .pdfIcon {
+      font-size: 1.2rem;
+      color: #cb0808;
+      margin: 0 5px;
+    }
+  }
+
+  .btn {
+    font-size: 1rem;
+    min-width: 150px;
+  }
+}

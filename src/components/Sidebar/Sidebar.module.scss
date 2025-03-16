@@ -2,7 +2,7 @@
   direction: rtl;
   width: 254px;
   background: #fff;
-  height: 100vh;
+  height: 910px;
   padding: 20px;
   border-right: 1px solid #ddd;
   ul {
@@ -33,10 +33,6 @@
         color: blue;
       }
 
-      // &:hover {
-      //   color: blue;
-      //   background: rgb(236, 247, 251);
-      // }
       background: rgb(236, 247, 251);
       border-radius: 5px;
     }
@@ -44,5 +40,8 @@
   .scrollList {
     height: fit-content;
     margin-right: 30px;
+    span {
+      font-size: 14px;
+    }
   }
 }

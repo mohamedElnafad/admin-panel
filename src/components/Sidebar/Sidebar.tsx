@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   List,
   ListItem,
@@ -29,6 +29,7 @@ import PolicyIcon from '@mui/icons-material/Policy';
 import styles from './Sidebar.module.scss';
 
 const Sidebar: React.FC = () => {
+  const [selectedNav, setSelectedNav] = useState('');
   const location = useLocation();
   const [openContent, setOpenContent] = useState(
     location.pathname.startsWith('/content-management')
@@ -38,38 +39,62 @@ const Sidebar: React.FC = () => {
     setOpenContent(!openContent);
   };
 
+  useEffect(() => {
+    setSelectedNav(location.pathname);
+  }, [location.pathname]);
+
   return (
     <nav className={styles.sidebar}>
       <List>
-        <ListItem component={NavLink} to='/report'>
+        <ListItem
+          component={NavLink}
+          to='/report'
+          className={selectedNav === '/report' ? styles.active : ''}
+        >
           <ListItemIcon>
             <ContentPasteIcon />
           </ListItemIcon>
           <ListItemText primary='التقارير' />
         </ListItem>
 
-        <ListItem component={NavLink} to='/contact'>
+        <ListItem
+          component={NavLink}
+          to='/'
+          className={selectedNav === '/' ? styles.active : ''}
+        >
           <ListItemIcon>
             <ContentPasteIcon />
           </ListItemIcon>
           <ListItemText primary='إدارة التواصل' />
         </ListItem>
 
-        <ListItem component={NavLink} to='/services'>
+        <ListItem
+          component={NavLink}
+          to='/services'
+          className={selectedNav === '/services' ? styles.active : ''}
+        >
           <ListItemIcon>
             <LaptopIcon />
           </ListItemIcon>
           <ListItemText primary='الخدمات الإلكترونية' />
         </ListItem>
 
-        <ListItem component={NavLink} to='/inquiries'>
+        <ListItem
+          component={NavLink}
+          to='/inquiries'
+          className={selectedNav === '/inquiries' ? styles.active : ''}
+        >
           <ListItemIcon>
             <HelpOutlineIcon />
           </ListItemIcon>
           <ListItemText primary='الاستفسارات' />
         </ListItem>
 
-        <ListItem component={NavLink} to='/jobs'>
+        <ListItem
+          component={NavLink}
+          to='/jobs'
+          className={selectedNav === '/jobs' ? styles.active : ''}
+        >
           <ListItemIcon>
             <BuildIcon />
           </ListItemIcon>
@@ -90,7 +115,11 @@ const Sidebar: React.FC = () => {
             <ListItem
               component={NavLink}
               to='/content-management/about-us'
-              className={styles.nested}
+              className={`${styles.nested} ${
+                selectedNav === '/content-management/about-us'
+                  ? styles.active
+                  : ''
+              }`}
             >
               <ListItemIcon>
                 <InfoIcon />
@@ -100,7 +129,11 @@ const Sidebar: React.FC = () => {
             <ListItem
               component={NavLink}
               to='/content-management/our-story'
-              className={styles.nested}
+              className={`${styles.nested} ${
+                selectedNav === '/content-management/our-story'
+                  ? styles.active
+                  : ''
+              }`}
             >
               <ListItemIcon>
                 <MessageIcon />
@@ -110,7 +143,11 @@ const Sidebar: React.FC = () => {
             <ListItem
               component={NavLink}
               to='/content-management/executive-message'
-              className={styles.nested}
+              className={`${styles.nested} ${
+                selectedNav === '/content-management/executive-message'
+                  ? styles.active
+                  : ''
+              }`}
             >
               <ListItemIcon>
                 <MessageIcon />
@@ -120,7 +157,11 @@ const Sidebar: React.FC = () => {
             <ListItem
               component={NavLink}
               to='/content-management/customs-authorities'
-              className={styles.nested}
+              className={`${styles.nested} ${
+                selectedNav === '/content-management/customs-authorities'
+                  ? styles.active
+                  : ''
+              }`}
             >
               <ListItemIcon>
                 <AccountBalanceIcon />
@@ -130,7 +171,11 @@ const Sidebar: React.FC = () => {
             <ListItem
               component={NavLink}
               to='/content-management/laws-guidelines'
-              className={styles.nested}
+              className={`${styles.nested} ${
+                selectedNav === '/content-management/laws-guidelines'
+                  ? styles.active
+                  : ''
+              }`}
             >
               <ListItemIcon>
                 <LibraryBooksIcon />
@@ -140,7 +185,11 @@ const Sidebar: React.FC = () => {
             <ListItem
               component={NavLink}
               to='/content-management/social-links'
-              className={styles.nested}
+              className={`${styles.nested} ${
+                selectedNav === '/content-management/social-links'
+                  ? styles.active
+                  : ''
+              }`}
             >
               <ListItemIcon>
                 <LinkIcon />
@@ -150,7 +199,11 @@ const Sidebar: React.FC = () => {
             <ListItem
               component={NavLink}
               to='/content-management/privacy-policy'
-              className={styles.nested}
+              className={`${styles.nested} ${
+                selectedNav === '/content-management/privacy-policy'
+                  ? styles.active
+                  : ''
+              }`}
             >
               <ListItemIcon>
                 <PolicyIcon />
@@ -160,21 +213,33 @@ const Sidebar: React.FC = () => {
           </List>
         </Collapse>
 
-        <ListItem component={NavLink} to='/tenders'>
+        <ListItem
+          component={NavLink}
+          to='/tenders'
+          className={selectedNav === '/tenders' ? styles.active : ''}
+        >
           <ListItemIcon>
             <GavelIcon />
           </ListItemIcon>
           <ListItemText primary='المناقصات و العطاءات' />
         </ListItem>
 
-        <ListItem component={NavLink} to='/teams'>
+        <ListItem
+          component={NavLink}
+          to='/comittee-and-teams'
+          className={selectedNav === '/comittee-and-teams' ? styles.active : ''}
+        >
           <ListItemIcon>
             <GroupsIcon />
           </ListItemIcon>
           <ListItemText primary='اللجان و فرق العمل' />
         </ListItem>
 
-        <ListItem component={NavLink} to='/media'>
+        <ListItem
+          component={NavLink}
+          to='/media'
+          className={selectedNav === '/media' ? styles.active : ''}
+        >
           <ListItemIcon>
             <PhotoLibraryIcon />
           </ListItemIcon>
