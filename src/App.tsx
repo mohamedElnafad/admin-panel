@@ -8,6 +8,7 @@ import ContactManagement from './components/ContactManagement/ContactManagement'
 import ExecutiveMessage from './Pages/content-management/excutive-msg/ExcutiveMessage';
 import OurStory from './Pages/content-management/our-story/OurStory';
 import AboutUs from './Pages/content-management/about-us/AboutUs';
+import CustomsAndAuthorities from './Pages/content-management/customs-and-authorities/CustomsAndAuthorities';
 
 function App() {
   return (
@@ -33,10 +34,10 @@ function App() {
                 path='/content-management/executive-message'
                 element={<ExecutiveMessage />}
               />
-              {/* <Route
-                  path='customs-authorities'
-                  element={<CustomsAndAuthorities />}
-                /> */}
+              <Route
+                path='/content-management/customs-authorities'
+                element={<CustomsAndAuthorities />}
+              />
               {/* <Route path='/content-management/laws-guidelines' element={<LawsAndGuidelines />} />
                 <Route path='/content-management/social-links' element={<SocialLinks />} />
                 <Route path='/content-management/privacy-policy' element={<PrivacyPolicy />} /> */}
