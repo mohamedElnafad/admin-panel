@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Sidebar from './components/Sidebar/Sidebar';
-import Header from './components/Header/Header';
+import Sidebar from './components/sidebar/Sidebar';
+import Header from './components/header/Header';
 import styles from './App.module.scss';
 import ReportPage from './Pages/report-page/ReportPage';
 import ContactManagement from './Pages/contact-management/ContactManagement';
@@ -12,6 +12,7 @@ import LawsAndGuidelines from './Pages/content-management/laws-and-guidlines/Law
 import SocialLinks from './Pages/content-management/social-links/SocialLinks';
 import PrivacyPolicy from './Pages/content-management/privacy-policy/PrivacyPolicy';
 import CommitteeAndTeams from './Pages/committe-and-teams/CommitteeAndTeams';
+import AddNewCommittee from './Pages/committe-and-teams/add-comittee-and-teams/AddNewCommittee';
 
 function App() {
   return (
@@ -27,6 +28,10 @@ function App() {
               <Route
                 path='/comittee-and-teams'
                 element={<CommitteeAndTeams />}
+              />
+              <Route
+                path='/comittee-and-teams/add-committee'
+                element={<AddNewCommittee />}
               />
               <Route
                 path='/content-management/about-us'

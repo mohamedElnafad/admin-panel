@@ -2,6 +2,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import AddIcon from '@mui/icons-material/Add';
 import styles from './CommitteeAndTeams.module.scss';
+import { useNavigate } from 'react-router-dom';
 
 const committees = [
   'لجنة التحديث والتطوير الحركي',
@@ -14,10 +15,14 @@ const committees = [
 ];
 
 const CommitteeAndTeams = () => {
+  const navigate = useNavigate();
   return (
     <div className='container mt-4'>
       <div className='d-flex justify-content-end mb-3'>
-        <button className='btn btn-primary d-flex align-items-center rounded-pill'>
+        <button
+          className='btn btn-primary d-flex align-items-center rounded-pill'
+          onClick={() => navigate('/comittee-and-teams/add-committee')}
+        >
           إضافة لجنة جديدة
           <AddIcon className='ms-1' />
         </button>

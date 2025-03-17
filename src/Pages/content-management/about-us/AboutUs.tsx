@@ -1,6 +1,6 @@
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 import styles from './AboutUs.module.scss';
-import Button from '../../../components/Button/Button';
+import Button from '../../../components/button/Button';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 
 const AboutUs = () => {

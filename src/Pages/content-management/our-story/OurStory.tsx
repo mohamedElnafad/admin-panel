@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './OurStory.module.scss';
-import Button from '../../../components/Button/Button';
+import Button from '../../../components/button/Button';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 const OurStory: React.FC = () => {
   return (

@@ -227,7 +227,12 @@ const Sidebar: React.FC = () => {
         <ListItem
           component={NavLink}
           to='/comittee-and-teams'
-          className={selectedNav === '/comittee-and-teams' ? styles.active : ''}
+          className={
+            selectedNav === '/comittee-and-teams' ||
+            selectedNav === '/comittee-and-teams/add-committee'
+              ? styles.active
+              : ''
+          }
         >
           <ListItemIcon>
             <GroupsIcon />

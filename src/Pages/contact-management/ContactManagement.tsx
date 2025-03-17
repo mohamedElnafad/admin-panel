@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './ContactManagement.module.scss';
-import Button from '../../components/Button/Button';
+import Button from '../../components/button/Button';
 import '../../App.module.scss';
 
 const ContactManagement: React.FC = () => {

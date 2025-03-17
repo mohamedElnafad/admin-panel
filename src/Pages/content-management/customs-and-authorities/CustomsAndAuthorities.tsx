@@ -1,7 +1,7 @@
 import styles from './CustomsAndAuthorities.module.scss';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
-import Button from '../../../components/Button/Button';
+import Button from '../../../components/button/Button';
 
 const CustomsAndAuthorities = () => {
   return (
