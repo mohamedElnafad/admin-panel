@@ -229,7 +229,10 @@ const Sidebar: React.FC = () => {
           to='/comittee-and-teams'
           className={
             selectedNav === '/comittee-and-teams' ||
-            selectedNav === '/comittee-and-teams/add-committee'
+            selectedNav === '/comittee-and-teams/add-committee' ||
+            selectedNav.includes(
+              '/comittee-and-teams/update-comittee-and-teams'
+            )
               ? styles.active
               : ''
           }

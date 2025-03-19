@@ -1,7 +1,7 @@
 .layout {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: fit-content;
 
   .mainContent {
     display: flex;
@@ -14,6 +14,6 @@
     padding: 28px 24px 28px 24px;
     background: #f1f2f6;
     text-align: right;
-    height: 910px;
+    height: fit-content;
   }
 }

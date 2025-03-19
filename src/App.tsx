@@ -13,6 +13,7 @@ import SocialLinks from './Pages/content-management/social-links/SocialLinks';
 import PrivacyPolicy from './Pages/content-management/privacy-policy/PrivacyPolicy';
 import CommitteeAndTeams from './Pages/committe-and-teams/CommitteeAndTeams';
 import AddNewCommittee from './Pages/committe-and-teams/add-comittee-and-teams/AddNewCommittee';
+import UpdateComitteeAndTeams from './Pages/committe-and-teams/update-comittee-and-teams/UpdateComitteeAndTeams';
 
 function App() {
   return (
@@ -32,6 +33,10 @@ function App() {
               <Route
                 path='/comittee-and-teams/add-committee'
                 element={<AddNewCommittee />}
+              />
+              <Route
+                path='/comittee-and-teams/update-comittee-and-teams/:committeeName/:index'
+                element={<UpdateComitteeAndTeams />}
               />
               <Route
                 path='/content-management/about-us'

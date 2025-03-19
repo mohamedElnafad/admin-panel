@@ -1,16 +1,18 @@
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
-import styles from './AddNewCommittee.module.scss';
+import styles from './UpdateComitteeAndTeams.module.scss';
 import AddIcon from '@mui/icons-material/Add';
 import DropDownList from '../../../components/dropdwon-list/DropDownList';
 import Button from '../../../components/button/Button';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { useParams } from 'react-router-dom';
 
-const AddNewCommittee = () => {
+const UpdateComitteeAndTeams = () => {
+  const { committeeName } = useParams();
   return (
     <>
       <div className='d-flex justify-content-end mb-4 gap-3'>
-        <span style={{ fontWeight: 'bold' }}>إضافة لجنة جديدة</span>
+        <span style={{ fontWeight: 'bold' }}>{committeeName}</span>
         <ArrowForwardIosIcon style={{ color: '#007bff' }} />
       </div>
       <div className={`container ${styles.addNewCommittee}`}>
@@ -58,7 +60,7 @@ const AddNewCommittee = () => {
             <div style={{ fontWeight: 'bold' }}>أعضاء الفريق</div>
             <button className='btn btn-primary d-flex align-items-center rounded-pill'>
               <AddIcon className='ms-1' />
-              إضافة عضو جديدة
+              إضافة لجنة جديدة
             </button>
           </div>
           <div className='col-md-6 mb-4'>
@@ -172,4 +174,4 @@ const AddNewCommittee = () => {
   );
 };
 
-export default AddNewCommittee;
+export default UpdateComitteeAndTeams;

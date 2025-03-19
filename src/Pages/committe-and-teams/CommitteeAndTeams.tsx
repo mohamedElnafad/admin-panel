@@ -35,7 +35,14 @@ const CommitteeAndTeams = () => {
             className='d-flex justify-content-between align-items-center border-bottom py-3'
           >
             <div className='d-flex gap-2'>
-              <button className='btn btn-primary d-flex align-items-center rounded-pill'>
+              <button
+                className='btn btn-primary d-flex align-items-center rounded-pill'
+                onClick={() =>
+                  navigate(
+                    `/comittee-and-teams/update-comittee-and-teams/${name}/${index}`
+                  )
+                }
+              >
                 تعديل
                 <EditIcon className='ms-1' />
               </button>
@@ -45,7 +52,7 @@ const CommitteeAndTeams = () => {
               </button>
             </div>
             <div className='d-flex align-items-center gap-3'>
-              <span className='fw-bold'>{name}</span>
+              <span>{name}</span>
               <img
                 src='/path/to/icon.png'
                 alt='Committee Icon'
