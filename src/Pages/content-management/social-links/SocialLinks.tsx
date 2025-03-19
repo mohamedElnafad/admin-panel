@@ -1,9 +1,9 @@
 import Button from '../../../components/button/Button';
-import styles from 'SocialLinks.module.scss';
+import styles from './SocialLinks.module.scss';
 
 const SocialLinks = () => {
   return (
-    <div className={`container`}>
+    <div className={`container ${styles.socialLinks}`}>
       <div className='row'>
         <div className='col-md-6 mb-4'>
           <label>رابط منصة فيسبوك</label>
