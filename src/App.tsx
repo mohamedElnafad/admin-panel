@@ -14,6 +14,7 @@ import PrivacyPolicy from './Pages/content-management/privacy-policy/PrivacyPoli
 import CommitteeAndTeams from './Pages/committe-and-teams/CommitteeAndTeams';
 import AddNewCommittee from './Pages/committe-and-teams/add-comittee-and-teams/AddNewCommittee';
 import UpdateComitteeAndTeams from './Pages/committe-and-teams/update-comittee-and-teams/UpdateComitteeAndTeams';
+import ElectronicServices from './Pages/electronic-and-services/ElectronicServices';
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
           <div className={styles.content}>
             <Routes>
               <Route path='/report' element={<ReportPage />} />
+              <Route
+                path='/electronic-services'
+                element={<ElectronicServices />}
+              />
               <Route path='/' element={<ContactManagement />} />
               <Route
                 path='/comittee-and-teams'

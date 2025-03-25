@@ -3,6 +3,8 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import AddIcon from '@mui/icons-material/Add';
 import styles from './CommitteeAndTeams.module.scss';
 import { useNavigate } from 'react-router-dom';
+import Pagination from '../../components/pagination/Pagination';
+import { useState } from 'react';
 
 const committees = [
   'لجنة التحديث والتطوير الحركي',
@@ -16,6 +18,8 @@ const committees = [
 
 const CommitteeAndTeams = () => {
   const navigate = useNavigate();
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = 20;
   return (
     <div className='container mt-4'>
       <div className='d-flex justify-content-end mb-3'>
@@ -27,7 +31,6 @@ const CommitteeAndTeams = () => {
           <AddIcon className='ms-1' />
         </button>
       </div>
-
       <div className={`${styles.committeeList} p-3 rounded shadow-sm bg-white`}>
         {committees.map((name, index) => (
           <div
@@ -62,25 +65,11 @@ const CommitteeAndTeams = () => {
           </div>
         ))}
       </div>
-
-      {/* Pagination */}
-      <div className='d-flex justify-content-center mt-4'>
-        <nav>
-          <ul className='pagination'>
-            <li className='page-item'>
-              <button className='page-link'>«</button>
-            </li>
-            {[1, 2, 3, 4, 5, 6, 7, 8, 20].map((num) => (
-              <li key={num} className='page-item'>
-                <button className='page-link'>{num}</button>
-              </li>
-            ))}
-            <li className='page-item'>
-              <button className='page-link'>»</button>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <Pagination
+        totalPages={totalPages}
+        currentPage={currentPage}
+        onPageChange={setCurrentPage}
+      />
     </div>
   );
 };

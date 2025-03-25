@@ -70,8 +70,10 @@ const Sidebar: React.FC = () => {
 
         <ListItem
           component={NavLink}
-          to='/services'
-          className={selectedNav === '/services' ? styles.active : ''}
+          to='/electronic-services'
+          className={
+            selectedNav === '/electronic-services' ? styles.active : ''
+          }
         >
           <ListItemIcon>
             <LaptopIcon />
