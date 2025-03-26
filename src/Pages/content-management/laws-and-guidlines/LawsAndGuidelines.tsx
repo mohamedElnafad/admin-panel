@@ -7,7 +7,7 @@ const LawsAndGuidelines = () => {
     <div className={`container ${styles.lawsAndGuidlines}`}>
       <div className='row'>
         <div className='col-md-6 mb-4'>
-          <span>رابط القانون</span>
+          <label className={styles.label}>رابط القانون</label>
           <div
             className={`${styles.fileUpload} rounded-pill form-control position-relative`}
           >
@@ -20,7 +20,7 @@ const LawsAndGuidelines = () => {
           </div>
         </div>
         <div className='col-md-6 mb-4'>
-          <span>رابط القانون</span>
+          <label className={styles.label}>رابط القانون</label>
           <div
             className={`${styles.fileUpload} rounded-pill form-control position-relative`}
           >
@@ -33,7 +33,7 @@ const LawsAndGuidelines = () => {
           </div>
         </div>
         <div className='col-md-6 mb-4'>
-          <span>رابط القانون</span>
+          <label className={styles.label}>رابط القانون</label>
           <div
             className={`${styles.fileUpload} rounded-pill form-control position-relative`}
           >
@@ -46,7 +46,7 @@ const LawsAndGuidelines = () => {
           </div>
         </div>
         <div className='col-md-6 mb-4'>
-          <span>رابط القانون</span>
+          <label className={styles.label}>رابط القانون</label>
           <div
             className={`${styles.fileUpload} rounded-pill form-control position-relative`}
           >
@@ -59,7 +59,7 @@ const LawsAndGuidelines = () => {
           </div>
         </div>
         <div className='col-md-6 mb-4'>
-          <span>رابط القانون</span>
+          <label className={styles.label}>رابط القانون</label>
           <div
             className={`${styles.fileUpload} rounded-pill form-control position-relative`}
           >
@@ -72,7 +72,7 @@ const LawsAndGuidelines = () => {
           </div>
         </div>
         <div className='col-md-6 mb-4'>
-          <span>رابط القانون</span>
+          <label className={styles.label}>رابط القانون</label>
           <div
             className={`${styles.fileUpload} rounded-pill form-control position-relative`}
           >
@@ -85,7 +85,7 @@ const LawsAndGuidelines = () => {
           </div>
         </div>
         <div className='col-md-6 mb-4'>
-          <span>رابط القانون</span>
+          <label className={styles.label}>رابط القانون</label>
           <div
             className={`${styles.fileUpload} rounded-pill form-control position-relative`}
           >
@@ -98,7 +98,7 @@ const LawsAndGuidelines = () => {
           </div>
         </div>
         <div className='col-md-6 mb-4'>
-          <span>رابط القانون</span>
+          <label className={styles.label}>رابط القانون</label>
           <div
             className={`${styles.fileUpload} rounded-pill form-control position-relative`}
           >
@@ -111,7 +111,7 @@ const LawsAndGuidelines = () => {
           </div>
         </div>
         <div className='col-md-6 mb-4'>
-          <span>رابط القانون</span>
+          <label className={styles.label}>رابط القانون</label>
           <div
             className={`${styles.fileUpload} rounded-pill form-control position-relative`}
           >
@@ -124,7 +124,7 @@ const LawsAndGuidelines = () => {
           </div>
         </div>
         <div className='col-md-6 mb-4'>
-          <span>رابط القانون</span>
+          <label className={styles.label}>رابط القانون</label>
           <div
             className={`${styles.fileUpload} rounded-pill form-control position-relative`}
           >

@@ -6,7 +6,8 @@
   border-radius: 20px;
 
   input[type='text'],
-  input[type='email'] {
+  input[type='email'],
+  input[type='number'] {
     background-color: #f9f7f7;
   }
 
@@ -52,6 +53,11 @@
       color: #007bff;
       margin: 0 5px;
     }
+  }
+  .pdfIcon {
+    font-size: 1.2rem;
+    color: #cb0808;
+    margin: 0 5px;
   }
 
   .btn {
