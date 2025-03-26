@@ -2,7 +2,16 @@ import React from 'react';
 import styles from './OurStory.module.scss';
 import Button from '../../../components/button/Button';
 import DropDownList from '../../../components/dropdwon-list/DropDownList';
+import { useGetAllStoriesQuery } from '../../../services/ourStorySlice';
 const OurStory: React.FC = () => {
+  const { data, error, isLoading } = useGetAllStoriesQuery();
+  console.log(data);
+  const yearOptions = data
+    ? Array.from(new Set(data.map((story) => story.yearTag))).map((year) => ({
+        label: year,
+        value: year,
+      }))
+    : [];
   return (
     <div className={styles.ourStory}>
       <label className={styles.label}>نص القصة</label>
@@ -15,14 +24,7 @@ const OurStory: React.FC = () => {
         <div className='col-md-12'>
           <div className={`col-md-6 mb-4`}>
             <label className={styles.label}>السنة</label>
-            <DropDownList
-              options={[
-                { value: 'manager', label: 'مدير حسابات' },
-                { value: 'developer', label: 'مطوّر' },
-                { value: 'designer', label: 'مصمّم' },
-              ]}
-              defaultValue='manager'
-            />
+            <DropDownList options={yearOptions} defaultValue='manager' />
           </div>
         </div>
       </div>
